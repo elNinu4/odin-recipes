@@ -68,3 +68,43 @@ body {
     background-color: rgb(169, 199, 198);
     margin: 30px 20px;
 }
+.flex-recipes{
+  display: flex;
+  flex-direction: column;   /* small screens: vertical */
+  gap: 16px;
+  width: 100%;
+}
+
+.card{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #ccc
+}
+
+.card a{
+  color:rgb(225, 34, 9);
+  font-size: 1.5em;
+  font-weight: bold;
+  /* text-decoration: */
+  text-align: center;
+}
+.card a:hover {
+  color: whitesmoke;
+  transition: 400ms;
+}
+@media (min-width: 1024px){
+  .flex-recipes{
+    flex-direction: row; /* side-by-side */
+  }
+
+  .card{
+    flex: 1;      /* equal widths */
+    min-width: 0; /* prevents overflow weirdness */
+  }
+  
+  .card-emoji{
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
